@@ -45,7 +45,7 @@ export default function TransitBridge() {
           <div className="grid gap-5 lg:grid-cols-[1fr_300px]">
             <div className="relative min-h-[500px] overflow-hidden rounded-[26px] bg-[#081c35]">
               <div className="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[.2em] text-slate-500">
-                Operational corridor / Malaysia
+                Planning corridor / Malaysia
               </div>
 
               <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
@@ -126,8 +126,8 @@ export default function TransitBridge() {
 
               <div className="mt-8 border-t border-white/10 pt-6">
                 <div className="flex justify-between text-xs">
-                  <span className="text-slate-500">Lane status</span>
-                  <span className="font-bold text-emerald-300">Planning active</span>
+                  <span className="text-slate-500">Selected lane</span>
+                  <span className="font-bold text-emerald-300">Planning profile active</span>
                 </div>
                 <div className="mt-3 h-1.5 rounded-full bg-white/10">
                   <div className="h-full w-[82%] rounded-full bg-blue-400" />

@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   CheckCircle2,
+  Terminal,
   ChevronRight,
   Clock3,
   Facebook,
@@ -52,23 +53,23 @@ export default function Home() {
     <main id="main-content" className="overflow-hidden">
       <nav
         aria-label="Primary navigation"
-        className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl"
+        className="fixed inset-x-0 top-0 z-50 border-b border-white/[.08] bg-[#030712]/80 backdrop-blur-2xl"
       >
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#" className="flex items-center gap-3" aria-label="Nilai Logistics home">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-white">
+            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/20 bg-white/[.04] text-cyan-300">
               <Truck size={20} />
             </div>
             <div>
-              <div className="text-sm font-black tracking-tight">NILAI LOGISTICS</div>
-              <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-400">
+              <div className="text-sm font-black tracking-tight text-white">NILAI LOGISTICS</div>
+              <div className="font-mono text-[9px] font-bold uppercase tracking-[.18em] text-slate-500">
                 & TRANS SDN BHD
               </div>
             </div>
           </a>
 
-          <div className="hidden items-center gap-7 text-sm font-bold text-slate-500 md:flex">
-            <a href="#quote" className="transition hover:text-slate-950">Instant Quote</a>
+          <div className="hidden items-center gap-7 font-mono text-[11px] font-bold uppercase tracking-[.12em] text-slate-500 md:flex">
+            <a href="#quote" className="transition hover:text-cyan-300">Instant Quote</a>
             <a href="#services" className="transition hover:text-slate-950">Services</a>
             <a href="#network" className="transition hover:text-slate-950">Network</a>
             <a href="#ecommerce" className="transition hover:text-slate-950">Seller Portal</a>
@@ -78,27 +79,27 @@ export default function Home() {
             href="https://wa.me/60132323305"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-lg shadow-blue-600/15 transition hover:bg-blue-700"
+            className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-2.5 font-mono text-[10px] font-bold uppercase tracking-[.1em] text-cyan-200 transition hover:bg-cyan-400/20"
           >
-            WhatsApp us <MessageCircle size={14} />
+            Operations <MessageCircle size={14} />
           </a>
         </div>
       </nav>
 
-      <section className="hero-glow grid-noise relative flex min-h-screen items-center px-5 pb-20 pt-32 sm:px-8">
+      <section className="command-hero grid-noise relative flex min-h-screen items-center px-5 pb-20 pt-32 sm:px-8">
         <div className="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[1.08fr_.92fr] lg:items-center">
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-bold text-slate-600 shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Nilai, Negeri Sembilan · East Malaysia corridors
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-emerald-400/20 bg-emerald-400/[.05] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[.16em] text-emerald-300">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_#10b981]" />
+              ALL SYSTEMS OPERATIONAL // NILAI HUB
             </div>
 
-            <h1 className="max-w-4xl text-5xl font-black leading-[.98] tracking-[-.055em] sm:text-7xl">
+            <h1 className="max-w-4xl text-5xl font-black leading-[.9] tracking-[-.065em] text-white sm:text-7xl lg:text-[88px]">
               Freight between West &amp; East Malaysia,{" "}
               <span className="text-gradient">made clearer.</span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-400 sm:text-xl">
               Nilai Logistics &amp; Trans helps businesses and households plan cargo
               movement between Peninsular Malaysia, Sabah and Sarawak—across air,
               sea, commercial, e-commerce and specialized shipments.
@@ -107,19 +108,19 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#quote"
-                className="inline-flex items-center gap-2 rounded-2xl bg-slate-950 px-5 py-3.5 text-sm font-bold text-white shadow-xl transition hover:bg-slate-800"
+                className="inline-flex items-center gap-2 rounded-2xl bg-cyan-300 px-5 py-3.5 text-sm font-black text-[#031018] shadow-[0_0_35px_rgba(6,182,212,.18)] transition hover:bg-cyan-200"
               >
-                Build a shipment estimate <ArrowRight size={16} />
+                Open quote matrix <ArrowRight size={16} />
               </a>
               <a
                 href="tel:+60387789008"
-                className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-3.5 text-sm font-bold text-slate-700 transition hover:border-slate-300"
+                className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[.04] px-5 py-3.5 text-sm font-bold text-white transition hover:border-cyan-400/30 hover:bg-white/[.07]"
               >
                 <Phone size={16} /> Call +603 8778 9008
               </a>
             </div>
 
-            <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-xs font-bold text-slate-500">
+            <div className="mt-9 grid max-w-2xl grid-cols-3 gap-3">
               <span className="inline-flex items-center gap-2">
                 <ShieldCheck size={15} className="text-blue-600" /> Structured shipment handoff
               </span>
@@ -134,12 +135,12 @@ export default function Home() {
 
           <div className="relative">
             <div className="absolute -inset-8 rounded-full bg-blue-500/10 blur-3xl" />
-            <div className="dark-glass relative rounded-[36px] p-6 text-white sm:p-8">
+            <div className="terminal-panel relative rounded-[36px] border border-cyan-400/20 bg-[#07101d]/90 p-6 text-white shadow-[0_35px_120px_rgba(0,0,0,.5)] sm:p-8">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-bold uppercase tracking-[.2em] text-blue-300">
                   Shipment planning
                 </span>
-                <Zap size={17} className="text-blue-300" />
+                <Terminal size={17} className="text-cyan-300" />
               </div>
 
               <div className="mt-10 grid grid-cols-2 gap-3">
@@ -149,27 +150,27 @@ export default function Home() {
                 <Mini l="Use cases" v="Business / Household" />
               </div>
 
-              <div className="mt-5 rounded-3xl bg-white/[.06] p-5">
+              <div className="mt-5 rounded-3xl border border-white/[.07] bg-black/30 p-5">
                 <div className="flex justify-between text-xs">
                   <span className="text-slate-400">Planning view</span>
                   <span className="font-bold text-emerald-300">Ready to plan</span>
                 </div>
-                <div className="mt-4 h-2 rounded-full bg-white/10">
-                  <div className="h-full w-[74%] rounded-full bg-gradient-to-r from-blue-500 to-cyan-300" />
+                <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/10">
+                  <div className="pipeline-beam h-full w-[42%] rounded-full bg-gradient-to-r from-cyan-500 via-cyan-300 to-emerald-300" />
                 </div>
-                <div className="mt-4 flex justify-between text-[10px] text-slate-500">
+                <div className="mt-4 flex justify-between font-mono text-[9px] uppercase text-slate-600">
                   <span>Pickup</span>
                   <span>Transit</span>
                   <span>Arrival</span>
                 </div>
               </div>
 
-              <div className="mt-5 rounded-2xl border border-white/10 bg-white/[.04] p-4">
+              <div className="mt-5 rounded-2xl border border-emerald-400/10 bg-emerald-400/[.035] p-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-300" />
                   <div>
-                    <div className="text-xs font-bold">Built around real shipment details</div>
-                    <div className="mt-1 text-[10px] leading-5 text-slate-500">
+                    <div className="font-mono text-[10px] font-bold uppercase tracking-[.12em] text-emerald-200">Handoff surface online</div>
+                    <div className="mt-1 text-[10px] leading-5 text-slate-600">
                       Route · cargo type · weight or volume · contact handoff
                     </div>
                   </div>
@@ -180,8 +181,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-slate-200 bg-white px-5 py-6 sm:px-8">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-4 text-xs font-bold uppercase tracking-[.16em] text-slate-400">
+      <section className="border-y border-white/[.07] bg-[#050b14] px-5 py-5 sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-3 font-mono text-[9px] font-bold uppercase tracking-[.2em] text-slate-600">
           <span>Peninsular Malaysia</span>
           <span>Sabah</span>
           <span>Sarawak</span>
@@ -191,16 +192,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="bg-slate-50 px-5 py-24 sm:px-8">
+      <section id="services" className="bg-[#050b14] px-5 py-24 text-white sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <div className="text-xs font-bold uppercase tracking-[.2em] text-blue-600">
+            <div className="font-mono text-[10px] font-bold uppercase tracking-[.2em] text-cyan-400">
               What we move
             </div>
-            <h2 className="mt-4 text-4xl font-black tracking-[-.04em] text-slate-950 sm:text-5xl">
+            <h2 className="mt-4 text-4xl font-black tracking-[-.05em] sm:text-6xl">
               One logistics partner. Different cargo realities.
             </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
+            <p className="mt-5 text-lg leading-8 text-slate-500">
               Start with the shipment you actually have. The planning flow adapts to
               the route, cargo category and shipment size instead of forcing every
               customer into the same process.
@@ -213,14 +214,14 @@ export default function Home() {
               return (
                 <article
                   key={service.title}
-                  className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="blueprint-card group relative overflow-hidden rounded-[28px] border border-white/[.08] bg-[#07101d] p-7 transition duration-500 hover:-translate-y-1 hover:border-cyan-400/30"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-400/15 bg-cyan-400/[.05] text-cyan-300">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-6 text-xl font-black text-slate-950">{service.title}</h3>
-                  <p className="mt-3 leading-7 text-slate-600">{service.text}</p>
-                  <div className="mt-5 border-t border-slate-100 pt-4 text-xs font-bold uppercase tracking-[.12em] text-slate-400">
+                  <h3 className="mt-6 text-xl font-black text-white">{service.title}</h3>
+                  <p className="mt-3 leading-7 text-slate-500">{service.text}</p>
+                  <div className="mt-5 border-t border-white/[.07] pt-4 font-mono text-[9px] font-bold uppercase tracking-[.13em] text-slate-600">
                     {service.meta}
                   </div>
                 </article>
@@ -234,16 +235,16 @@ export default function Home() {
       <TransitBridge />
       <BulkManifest />
 
-      <section className="border-y border-slate-200 bg-white px-5 py-20 sm:px-8">
+      <section className="border-y border-white/[.07] bg-[#030712] px-5 py-20 text-white sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
             <div className="text-xs font-bold uppercase tracking-[.2em] text-blue-600">
               Company profile
             </div>
-            <h2 className="mt-4 text-4xl font-black tracking-[-.04em] text-slate-950">
+            <h2 className="mt-4 text-4xl font-black tracking-[-.05em] sm:text-5xl">
               Nilai-based logistics with an East Malaysia focus.
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-500">
               Nilai Logistics &amp; Trans Sdn Bhd is based in Bandar Baru Nilai,
               Negeri Sembilan, and focuses on freight forwarding and cargo movement
               across Malaysian domestic corridors.
@@ -259,7 +260,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-950 px-5 py-24 text-white sm:px-8">
+      <section className="bg-[#050b14] px-5 py-24 text-white sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[1fr_.8fr]">
             <div>
@@ -350,8 +351,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-slate-950 px-5 pb-10 text-slate-500 sm:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-7 text-xs sm:flex-row sm:justify-between">
+      <footer className="bg-[#030712] px-5 pb-10 text-slate-600 sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/[.07] pt-7 font-mono text-[9px] uppercase tracking-[.14em] sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} Nilai Logistics &amp; Trans Sdn Bhd</span>
           <span>Peninsular Malaysia · Sabah · Sarawak · Labuan</span>
         </div>
@@ -371,9 +372,10 @@ function Mini({ l, v }: { l: string; v: string }) {
 
 function Fact({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-      <div className="text-[10px] font-bold uppercase tracking-[.15em] text-slate-400">{label}</div>
-      <div className="mt-2 text-sm font-black text-slate-950">{value}</div>
+    <div className="rounded-2xl border border-white/[.08] bg-white/[.025] p-5">
+      <div className="font-mono text-[9px] font-bold uppercase tracking-[.15em] text-slate-600">{label}</div>
+      <div className="mt-2 text-sm font-black text-white">{value}</div>
     </div>
   );
 }
+\nfunction HeroMetric({ value, label }: { value: string; label: string }) { return <div className="rounded-2xl border border-white/[.07] bg-white/[.025] p-3"><div className="font-mono text-sm font-black text-cyan-300">{value}</div><div className="mt-1 text-[9px] leading-4 text-slate-600">{label}</div></div>; }\n

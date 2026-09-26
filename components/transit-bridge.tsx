@@ -21,13 +21,13 @@ export default function TransitBridge() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
           <div>
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-[.18em] text-blue-300">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-[.18em] text-cyan-300">
               <Activity size={13} /> Transit command view
             </div>
             <h2 className="text-4xl font-black tracking-[-.04em] sm:text-6xl">
               One network.
               <br />
-              <span className="text-blue-400">Multiple lanes.</span>
+              <span className="text-cyan-300">Multiple lanes.</span>
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-slate-300">
               See the operating corridors at a glance. Select a destination to surface the service profile and movement type it supports.
@@ -43,9 +43,9 @@ export default function TransitBridge() {
 
         <div className="dark-glass mt-12 overflow-hidden rounded-[34px] p-4 sm:p-7">
           <div className="grid gap-5 lg:grid-cols-[1fr_300px]">
-            <div className="relative min-h-[500px] overflow-hidden rounded-[26px] bg-[#081c35]">
+            <div className="relative min-h-[500px] overflow-hidden rounded-[26px] bg-[#030b16]">
               <div className="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[.2em] text-slate-500">
-                Planning corridor / Malaysia
+                LIVE CORRIDOR // MALAYSIA
               </div>
 
               <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
@@ -64,14 +64,14 @@ export default function TransitBridge() {
                       <path
                         d={path}
                         fill="none"
-                        stroke={active === destination.id ? "#0a8cff" : "#315579"}
+                        stroke={active === destination.id ? "#06b6d4" : "#24435f"}
                         strokeWidth={active === destination.id ? "1.1" : ".55"}
                         className="route-line"
                       />
                       {active === destination.id && (
                         <motion.circle
                           r="1.4"
-                          fill="#6cc4ff"
+                          fill="#67e8f9"
                           animate={{ opacity: [0.2, 1, 0.2] }}
                           transition={{ duration: 1.3, repeat: Infinity }}
                         >
@@ -112,7 +112,7 @@ export default function TransitBridge() {
               className="rounded-[26px] bg-white/[.055] p-6"
             >
               <div className="flex justify-between">
-                <span className="rounded-xl bg-blue-500/15 p-3 text-blue-300">
+                <span className="rounded-xl bg-cyan-400/10 p-3 text-blue-300">
                   {selected.id === "nilai" ? <Truck size={20} /> : <Anchor size={20} />}
                 </span>
                 <ArrowUpRight size={17} className="text-slate-500" />
@@ -151,10 +151,10 @@ function Stat({
   label: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[.04] p-4">
+    <div className="rounded-2xl border border-white/[.08] bg-white/[.025] p-4">
       <Icon size={17} className="text-blue-300" />
-      <div className="mt-4 text-sm font-black">{value}</div>
-      <div className="mt-1 text-[11px] text-slate-500">{label}</div>
+      <div className="mt-4 font-mono text-sm font-black">{value}</div>
+      <div className="mt-1 font-mono text-[9px] uppercase tracking-[.12em] text-slate-600">{label}</div>
     </div>
   );
 }

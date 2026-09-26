@@ -91,7 +91,7 @@ export default function Home() {
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-emerald-400/20 bg-emerald-400/[.05] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[.16em] text-emerald-300">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_#10b981]" />
-              ALL SYSTEMS OPERATIONAL // NILAI HUB
+              DIGITAL INTAKE ONLINE // NILAI HUB
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[.9] tracking-[-.065em] text-white sm:text-7xl lg:text-[88px]">
@@ -355,6 +355,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/[.07] pt-7 font-mono text-[9px] uppercase tracking-[.14em] sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} Nilai Logistics &amp; Trans Sdn Bhd</span>
           <span>Peninsular Malaysia · Sabah · Sarawak · Labuan</span>
+          <span>BUILD_REVISION: d21548c // CORRIDOR_ROUTING: ACTIVE</span>
         </div>
       </footer>
     </main>

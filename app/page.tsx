@@ -95,8 +95,8 @@ export default function Home() {
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[.9] tracking-[-.065em] text-white sm:text-7xl lg:text-[88px]">
-              Freight between West &amp; East Malaysia,{" "}
-              <span className="text-gradient">made clearer.</span>
+              Move cargo. See the{" "}
+              <span className="text-gradient">system.</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-400 sm:text-xl">
@@ -122,13 +122,13 @@ export default function Home() {
 
             <div className="mt-9 grid max-w-2xl grid-cols-3 gap-3">
               <span className="inline-flex items-center gap-2">
-                <ShieldCheck size={15} className="text-blue-600" /> Structured shipment handoff
+                <ShieldCheck size={15} className="text-cyan-300" /> Structured shipment handoff
               </span>
               <span className="inline-flex items-center gap-2">
-                <Clock3 size={15} className="text-blue-600" /> Air &amp; sea planning
+                <Clock3 size={15} className="text-cyan-300" /> Air &amp; sea planning
               </span>
               <span className="inline-flex items-center gap-2">
-                <LockKeyhole size={15} className="text-blue-600" /> Secure lead capture
+                <LockKeyhole size={15} className="text-cyan-300" /> Secure lead capture
               </span>
             </div>
           </div>
@@ -281,7 +281,7 @@ export default function Home() {
                   href="https://wa.me/60132323305"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-blue-700"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-cyan-300 px-5 py-3.5 text-sm font-bold text-[#031018] transition hover:bg-cyan-200"
                 >
                   WhatsApp +6013 232 3305 <MessageCircle size={16} />
                 </a>

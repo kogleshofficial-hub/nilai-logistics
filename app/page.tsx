@@ -370,7 +370,16 @@ function Mini({ l, v }: { l: string; v: string }) {
   );
 }
 
-function HeroMetric({ value, label }: { value: string; label: string }) { return <div className="rounded-2xl border border-white/[.07] bg-white/[.025] p-3"><div className="font-mono text-sm font-black text-cyan-300">{value}</div><div className="mt-1 text-[9px] leading-4 text-slate-600">{label}</div></div>; }\n\nfunction Fact({ label, value }: { label: string; value: string }) {
+function HeroMetric({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="rounded-2xl border border-white/[.07] bg-white/[.025] p-3">
+      <div className="font-mono text-sm font-black text-cyan-300">{value}</div>
+      <div className="mt-1 text-[9px] leading-4 text-slate-600">{label}</div>
+    </div>
+  );
+}
+
+function Fact({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-2xl border border-white/[.08] bg-white/[.025] p-5">
       <div className="font-mono text-[9px] font-bold uppercase tracking-[.15em] text-slate-600">{label}</div>
@@ -378,4 +387,3 @@ function HeroMetric({ value, label }: { value: string; label: string }) { return
     </div>
   );
 }
-\nfunction HeroMetric({ value, label }: { value: string; label: string }) { return <div className="rounded-2xl border border-white/[.07] bg-white/[.025] p-3"><div className="font-mono text-sm font-black text-cyan-300">{value}</div><div className="mt-1 text-[9px] leading-4 text-slate-600">{label}</div></div>; }\n

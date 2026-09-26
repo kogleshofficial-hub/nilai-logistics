@@ -9,7 +9,7 @@ const siteUrl =
 
 const title = "Nilai Logistics & Trans Sdn Bhd | Peninsular Malaysia ↔ Sabah & Sarawak";
 const description =
-  "Enterprise cargo, commercial freight, medical equipment logistics and household relocation across Peninsular Malaysia, Sabah and Sarawak.";
+  "Freight forwarding and cargo planning across Peninsular Malaysia, Sabah and Sarawak, including air freight, sea freight, commercial cargo, e-commerce consolidation and household relocation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -19,13 +19,16 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    "logistics Sabah Sarawak",
-    "cargo Sabah",
-    "cargo Sarawak",
-    "East Malaysia logistics",
-    "Nilai logistics",
-    "bulk e-commerce shipping Malaysia",
-    "Malaysia cargo transport",
+    "Nilai Logistics",
+    "Nilai freight forwarding",
+    "Sabah Sarawak logistics",
+    "East Malaysia cargo",
+    "Peninsular Malaysia cargo",
+    "air freight Malaysia",
+    "sea freight Malaysia",
+    "e-commerce cargo Malaysia",
+    "commercial freight Malaysia",
+    "household relocation Malaysia",
   ],
   alternates: {
     canonical: "/",
@@ -42,9 +45,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Nilai Logistics & Trans",
+    title: "Nilai Logistics & Trans Sdn Bhd",
     description:
-      "A clearer operating experience for cargo moving between Peninsular Malaysia and East Malaysia.",
+      "Freight forwarding and cargo planning between Peninsular Malaysia, Sabah and Sarawak.",
     url: siteUrl,
     siteName: "Nilai Logistics & Trans Sdn Bhd",
     locale: "en_MY",
@@ -60,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nilai Logistics & Trans",
+    title: "Nilai Logistics & Trans Sdn Bhd",
     description:
-      "Cargo planning for Peninsular Malaysia ↔ Sabah & Sarawak.",
+      "Freight forwarding and cargo planning across Peninsular Malaysia, Sabah and Sarawak.",
     images: ["/opengraph-image"],
   },
   icons: {
@@ -74,16 +77,38 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
   name: "Nilai Logistics & Trans Sdn Bhd",
+  legalName: "NILAI LOGISTICS & TRANS SDN BHD",
   url: siteUrl,
   description,
+  telephone: "+60387789008",
+  email: "nilai.logistics@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "PT12899-A, Tingkat Satu, Jalan BBN 1/7F, Putra Indah, Putra Nilai",
+    postalCode: "71800",
+    addressLocality: "Nilai",
+    addressRegion: "Negeri Sembilan",
+    addressCountry: "MY",
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Peninsular Malaysia" },
+    { "@type": "AdministrativeArea", name: "Sabah" },
+    { "@type": "AdministrativeArea", name: "Sarawak" },
+  ],
+  sameAs: [
+    "https://www.facebook.com/nilai.logistics/",
+    "https://www.tiktok.com/@nilailogistics",
+    "https://www.youtube.com/@nilailogisticstranssdnbhd5356",
+  ],
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en-MY">
       <body>
         <a
           href="#main-content"

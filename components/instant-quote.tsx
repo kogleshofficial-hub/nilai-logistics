@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check, Clock3, LockKeyhole, MessageCircle, Package, Plane, Ship, Sparkles, Truck } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import type { ReactNode } from "react";
 
 const routes = [
   { id: "pen-sabah", label: "Peninsular → Sabah", detail: "Kota Kinabalu, Labuan & statewide delivery" },
@@ -68,7 +69,7 @@ export default function InstantQuote() {
           ...form,
           route: selectedRoute.label,
           cargoType: selectedCargo.label,
-          quantity,
+          quantity: unit === "cuft" ? quantity / 35.3147 : unit === "lbs" ? planningKg : quantity,
           quantityUnit: unit === "cbm" || unit === "cuft" ? "cbm" : "kg",
           estimate: { air: estimate.air, sea: estimate.sea, airTransit: "3–4 days", seaTransit: "2–3 weeks" },
         }),
@@ -202,7 +203,7 @@ export default function InstantQuote() {
   );
 }
 
-function MatrixLabel({ children }: { children: React.ReactNode }) {
+function MatrixLabel({ children }: { children: ReactNode }) {
   return <div className="mt-7 font-mono text-[9px] font-black uppercase tracking-[.18em] text-cyan-700 first:mt-0">{children}</div>;
 }
 

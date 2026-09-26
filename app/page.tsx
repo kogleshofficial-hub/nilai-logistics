@@ -71,8 +71,8 @@ export default function Home() {
           <div className="hidden items-center gap-7 font-mono text-[11px] font-bold uppercase tracking-[.12em] text-slate-500 md:flex">
             <a href="#quote" className="transition hover:text-cyan-300">Instant Quote</a>
             <a href="#services" className="transition hover:text-cyan-300">Services</a>
-            <a href="#network" className="transition hover:text-slate-950">Network</a>
-            <a href="#ecommerce" className="transition hover:text-slate-950">Seller Portal</a>
+            <a href="#network" className="transition hover:text-cyan-300">Network</a>
+            <a href="#ecommerce" className="transition hover:text-cyan-300">Seller Portal</a>
           </div>
 
           <a

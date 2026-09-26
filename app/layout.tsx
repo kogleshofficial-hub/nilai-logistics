@@ -1,9 +1,102 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
+const title = "Nilai Logistics & Trans Sdn Bhd | Peninsular Malaysia ↔ Sabah & Sarawak";
+const description =
+  "Enterprise cargo, commercial freight, medical equipment logistics and household relocation across Peninsular Malaysia, Sabah and Sarawak.";
+
 export const metadata: Metadata = {
-  title: "Nilai Logistics & Trans Sdn Bhd | Peninsular Malaysia ↔ Sabah & Sarawak",
-  description: "Enterprise cargo, commercial freight, medical equipment logistics and household relocation from Peninsular Malaysia to Sabah and Sarawak.",
-  keywords: ["logistics Sabah Sarawak","cargo Sabah","cargo Sarawak","East Malaysia logistics","Nilai logistics","bulk e-commerce shipping Malaysia"],
-  openGraph: { title: "Nilai Logistics & Trans", description: "Moving critical cargo across Malaysia with a clearer operating experience.", type: "website" }
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s | Nilai Logistics & Trans",
+  },
+  description,
+  keywords: [
+    "logistics Sabah Sarawak",
+    "cargo Sabah",
+    "cargo Sarawak",
+    "East Malaysia logistics",
+    "Nilai logistics",
+    "bulk e-commerce shipping Malaysia",
+    "Malaysia cargo transport",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    title: "Nilai Logistics & Trans",
+    description:
+      "A clearer operating experience for cargo moving between Peninsular Malaysia and East Malaysia.",
+    url: siteUrl,
+    siteName: "Nilai Logistics & Trans Sdn Bhd",
+    locale: "en_MY",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Nilai Logistics & Trans — Peninsular Malaysia to East Malaysia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nilai Logistics & Trans",
+    description:
+      "Cargo planning for Peninsular Malaysia ↔ Sabah & Sarawak.",
+    images: ["/opengraph-image"],
+  },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
 };
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Nilai Logistics & Trans Sdn Bhd",
+  url: siteUrl,
+  description,
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en">
+      <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-slate-950 focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-white"
+        >
+          Skip to main content
+        </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        {children}
+      </body>
+    </html>
+  );
+}

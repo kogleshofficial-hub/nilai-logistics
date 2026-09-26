@@ -1,10 +1,21 @@
 @import "tailwindcss";
+
 :root{--ink:#07111f;--line:#dbe3ed}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#f7f9fc;font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit}::selection{background:#b9d6ff;color:#07111f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#f7f9fc;font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+button,input{font:inherit}
+button,a,input{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(7,86,217,.3);outline-offset:3px}
+::selection{background:#b9d6ff;color:#07111f}
 .grid-noise{background-image:linear-gradient(rgba(7,17,31,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(7,17,31,.035) 1px,transparent 1px);background-size:32px 32px}
 .hero-glow{background:radial-gradient(circle at 70% 20%,rgba(10,140,255,.20),transparent 30%),radial-gradient(circle at 25% 0%,rgba(7,86,217,.13),transparent 35%)}
 .glass{background:rgba(255,255,255,.78);border:1px solid rgba(219,227,237,.85);box-shadow:0 24px 70px rgba(7,17,31,.08);backdrop-filter:blur(20px)}
 .dark-glass{background:linear-gradient(145deg,rgba(13,31,57,.94),rgba(5,18,35,.92));border:1px solid rgba(124,168,224,.18);box-shadow:0 30px 100px rgba(1,9,20,.32)}
 .text-gradient{background:linear-gradient(100deg,#07111f 15%,#0756d9 58%,#0a8cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.route-line{stroke-dasharray:5 10;animation:dash 2.8s linear infinite}@keyframes dash{to{stroke-dashoffset:-45}}@keyframes pulse-ring{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:.9;transform:scale(1.15)}}.pulse-ring{animation:pulse-ring 2.2s ease-in-out infinite}
+.route-line{stroke-dasharray:5 10;animation:dash 2.8s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-45}}
+@keyframes pulse-ring{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:.9;transform:scale(1.15)}}
+.pulse-ring{animation:pulse-ring 2.2s ease-in-out infinite}
 input[type=range]{accent-color:#0756d9}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.route-line,.pulse-ring{animation:none!important}}

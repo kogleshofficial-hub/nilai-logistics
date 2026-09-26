@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Cargo planning across Peninsular Malaysia, Sabah and Sarawak.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f7f9fc",
-    theme_color: "#07111f",
+    background_color: "#030712",
+    theme_color: "#06b6d4",
     lang: "en-MY",
     icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
   };

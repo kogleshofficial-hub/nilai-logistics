@@ -30,18 +30,24 @@ export default function Image() {
       >
         <div
           style={{
-            width: 58,
-            height: 58,
-            borderRadius: 16,
-            background: "#0a8cff",
+            width: 76,
+            height: 76,
+            borderRadius: 18,
+            background: "#ffffff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            color: "#1477b9",
+            fontSize: 34,
+            fontWeight: 900,
           }}
         >
-          <span>N</span>
+          NL
         </div>
-        <span>NILAI LOGISTICS &amp; TRANS</span>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <span>NILAI LOGISTICS &amp; TRANS</span>
+          <span style={{ fontSize: 15, color: "#73849a", marginTop: 5 }}>SDN BHD</span>
+        </div>
       </div>
 
       <div

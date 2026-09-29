@@ -6,8 +6,8 @@ import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 
 const routes = [
-  { id: "pen-sabah", label: "Peninsular → Sabah", detail: "Kota Kinabalu, Labuan & statewide delivery" },
-  { id: "pen-sarawak", label: "Peninsular → Sarawak", detail: "Kuching, Bintulu & statewide delivery" },
+  { id: "pen-sabah", label: "Peninsular → Sabah", detail: "Sabah destinations · final delivery subject to confirmation" },
+  { id: "pen-sarawak", label: "Peninsular → Sarawak", detail: "Sarawak destinations · final delivery subject to confirmation" },
   { id: "east-pen", label: "East Malaysia → Peninsular", detail: "Reverse logistics and return movements" },
 ];
 
@@ -57,7 +57,7 @@ export default function InstantQuote() {
   const lock = async () => {
     setError("");
     if (!form.name || !form.email || !form.whatsapp) {
-      setError("Enter your name, business email and WhatsApp number to lock the current estimate.");
+      setError("Enter your name, business email and WhatsApp number to request rate confirmation.");
       return;
     }
     setSaving(true);
@@ -146,7 +146,7 @@ export default function InstantQuote() {
               </div>
               <div className="mt-7 flex items-end justify-between gap-4">
                 <div>
-                  <div className="font-mono text-[9px] uppercase tracking-[.16em] text-slate-500">Live shipment scale</div>
+                  <div className="font-mono text-[9px] uppercase tracking-[.16em] text-slate-500">Shipment scale</div>
                   <div className="mt-2 text-5xl font-black tracking-tight">{quantity.toLocaleString()} <span className="font-mono text-sm text-cyan-300">{config.label}</span></div>
                 </div>
                 <div className="rounded-2xl border border-emerald-400/10 bg-emerald-400/[.04] px-4 py-3 text-right">
@@ -162,7 +162,7 @@ export default function InstantQuote() {
           <div>
             <div className="rounded-3xl border border-cyan-400/15 bg-[#061326] p-6 text-white">
               <div className="flex items-center justify-between">
-                <div className="font-mono text-[10px] font-bold uppercase tracking-[.18em] text-cyan-300">04 / Live planning terminal</div>
+                <div className="font-mono text-[10px] font-bold uppercase tracking-[.18em] text-cyan-300">04 / Indicative planning</div>
                 <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/[.05] px-3 py-1 font-mono text-[8px] font-bold uppercase tracking-widest text-emerald-300"><span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" /> Calculating</span>
               </div>
               <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
@@ -181,7 +181,7 @@ export default function InstantQuote() {
               </div>
               {error && <p role="alert" className="mt-4 rounded-xl bg-red-50 p-3 text-sm font-semibold text-red-700">{error}</p>}
               <button disabled={saving} onClick={lock} className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-950 px-5 py-4 text-sm font-bold text-white transition hover:bg-cyan-700 disabled:opacity-60">
-                <LockKeyhole size={17} /> {saving ? "Securing shipment brief…" : "Lock in current planning rate"}
+                <LockKeyhole size={17} /> {saving ? "Securing shipment brief…" : "Request rate confirmation"}
               </button>
               {saved && (
                 <div className="mt-4 space-y-3">

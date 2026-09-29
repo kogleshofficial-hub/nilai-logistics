@@ -6,6 +6,7 @@ import {
   Clock3,
   Facebook,
   FileSpreadsheet,
+  Youtube,
   LockKeyhole,
   Mail,
   MapPin,
@@ -56,16 +57,10 @@ export default function Home() {
         className="fixed inset-x-0 top-0 z-50 border-b border-white/[.08] bg-[#030712]/80 backdrop-blur-2xl"
       >
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8">
-          <a href="#" className="flex items-center gap-3" aria-label="Nilai Logistics home">
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/20 bg-white/[.04] text-cyan-300">
-              <Truck size={20} />
-            </div>
-            <div>
-              <div className="text-sm font-black tracking-tight text-white">NILAI LOGISTICS</div>
-              <div className="font-mono text-[9px] font-bold uppercase tracking-[.18em] text-slate-500">
-                & TRANS SDN BHD
-              </div>
-            </div>
+          <a href="#" className="flex items-center gap-3" aria-label="Nilai Logistics & Trans home">
+            <span className="flex h-11 w-[188px] items-center overflow-hidden rounded-xl border border-white/10 bg-white px-2 shadow-[0_8px_30px_rgba(0,0,0,.25)] sm:w-[220px]">
+              <img src="/nilai-logo.svg" alt="Nilai Logistics & Trans Sdn Bhd" className="h-full w-full object-contain" />
+            </span>
           </a>
 
           <div className="hidden items-center gap-7 font-mono text-[11px] font-bold uppercase tracking-[.12em] text-slate-500 md:flex">
@@ -278,7 +273,7 @@ export default function Home() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="https://wa.me/60132323305"
+                  href="https://wa.me/60132323305?text=Hello%20Nilai%20Logistics%20%26%20Trans%2C%20I%20would%20like%20to%20discuss%20a%20shipment."
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-2xl bg-cyan-300 px-5 py-3.5 text-sm font-bold text-[#031018] transition hover:bg-cyan-200"
@@ -307,6 +302,14 @@ export default function Home() {
                   <br />
                   71800 Nilai, Negeri Sembilan, Malaysia
                 </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=PT12899-A%20Jalan%20BBN%201%2F7F%20Putra%20Nilai%2071800%20Negeri%20Sembilan%20Malaysia"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex text-xs font-bold text-cyan-300 transition hover:text-cyan-200"
+                >
+                  Open office location
+                </a>
               </div>
 
               <div className="mt-6 border-t border-white/10 pt-5">
@@ -324,9 +327,16 @@ export default function Home() {
                   <Mail size={16} className="text-blue-300" />
                   nilai.logistics@gmail.com
                 </a>
+                <a
+                  href="mailto:muru.nathan@yahoo.com"
+                  className="mt-3 flex items-center gap-3 text-sm font-bold text-white"
+                >
+                  <Mail size={16} className="text-blue-300" />
+                  muru.nathan@yahoo.com
+                </a>
               </div>
 
-              <div className="mt-6 flex gap-3">
+              <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   href="https://www.facebook.com/nilai.logistics/"
                   target="_blank"
@@ -345,6 +355,15 @@ export default function Home() {
                 >
                   <span className="text-xs font-black">TT</span>
                 </a>
+                <a
+                  href="https://www.youtube.com/@nilailogisticstranssdnbhd5356"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Nilai Logistics on YouTube"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 text-slate-300 transition hover:bg-white/5"
+                >
+                  <Youtube size={17} />
+                </a>
               </div>
             </div>
           </div>
@@ -355,7 +374,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/[.07] pt-7 font-mono text-[9px] uppercase tracking-[.14em] sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} Nilai Logistics &amp; Trans Sdn Bhd</span>
           <span>Peninsular Malaysia · Sabah · Sarawak · Labuan</span>
-          <span>BUILD_REVISION: d21548c // CORRIDOR_ROUTING: ACTIVE</span>
+          <span>BUILD_REVISION: logo-refresh // DIGITAL_INTAKE: ACTIVE</span>
         </div>
       </footer>
     </main>

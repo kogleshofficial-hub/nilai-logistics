@@ -71,6 +71,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 
@@ -84,6 +85,22 @@ const organizationJsonLd = {
   description,
   telephone: "+60387789008",
   email: "nilai.logistics@gmail.com",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+60387789008",
+      contactType: "customer service",
+      areaServed: "MY",
+      availableLanguage: ["en", "ms"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+60132323305",
+      contactType: "sales",
+      areaServed: "MY",
+      availableLanguage: ["en", "ms"],
+    },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "PT12899-A, Tingkat Satu, Jalan BBN 1/7F, Putra Indah, Putra Nilai",

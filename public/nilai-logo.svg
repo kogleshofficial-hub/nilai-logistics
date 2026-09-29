@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Nilai Logistics &amp; Trans Sdn Bhd</title>
+  <desc id="desc">Nilai Logistics and Trans logo with blue NL lettering and black logistics swoosh.</desc>
+  <rect width="1200" height="620" rx="28" fill="#ffffff"/>
+  <g transform="translate(90 78)">
+    <path d="M365 70 C485 -12 690 -18 806 70 C910 149 906 291 826 379 C746 467 605 514 472 486 C407 472 357 443 323 407 C405 440 503 431 575 382 C661 323 707 229 686 155 C666 86 590 47 505 56 C452 62 405 81 365 108 C330 132 304 151 279 173 C300 139 328 104 365 70Z" fill="#171717"/>
+    <path d="M139 116 H251 L316 304 L381 116 H493 L428 391 H313 L248 206 L183 391 H68 Z" fill="#1477b9"/>
+    <path d="M515 116 H629 L594 266 H722 L693 391 H500 Z" fill="#1477b9"/>
+    <text x="65" y="446" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" font-style="italic" fill="#111111" letter-spacing="1.2">NILAI LOGISTICS &amp; TRANS SDN BHD</text>
+  </g>
+</svg>

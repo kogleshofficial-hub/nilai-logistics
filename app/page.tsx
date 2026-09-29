@@ -68,10 +68,11 @@ export default function Home() {
             <a href="#services" className="transition hover:text-cyan-300">Services</a>
             <a href="#network" className="transition hover:text-cyan-300">Network</a>
             <a href="#ecommerce" className="transition hover:text-cyan-300">Seller Portal</a>
+            <a href="#contact" className="transition hover:text-cyan-300">Contact</a>
           </div>
 
           <a
-            href="https://wa.me/60132323305"
+            href="https://wa.me/60132323305?text=Hello%20Nilai%20Logistics%20%26%20Trans%2C%20I%20would%20like%20to%20enquire%20about%20a%20shipment."
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-2.5 font-mono text-[10px] font-bold uppercase tracking-[.1em] text-cyan-200 transition hover:bg-cyan-400/20"
@@ -90,8 +91,8 @@ export default function Home() {
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[.9] tracking-[-.065em] text-white sm:text-7xl lg:text-[88px]">
-              Move cargo. See the{" "}
-              <span className="text-gradient">system.</span>
+              MOVE CARGO. SEE THE{" "}
+              <span className="text-gradient">SYSTEM.</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-400 sm:text-xl">
@@ -255,7 +256,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#050b14] px-5 py-24 text-white sm:px-8">
+      <section id="contact" className="bg-[#050b14] px-5 py-24 text-white sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[1fr_.8fr]">
             <div>
@@ -374,7 +375,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/[.07] pt-7 font-mono text-[9px] uppercase tracking-[.14em] sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} Nilai Logistics &amp; Trans Sdn Bhd</span>
           <span>Peninsular Malaysia · Sabah · Sarawak · Labuan</span>
-          <span>BUILD_REVISION: logo-refresh // DIGITAL_INTAKE: ACTIVE</span>
+          <span>NILAI LOGISTICS &amp; TRANS // DIGITAL INTAKE</span>
         </div>
       </footer>
     </main>
